@@ -7,21 +7,23 @@
                         <li class="list-group-item" *ngFor="let quote of quotes; index as i">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="quote">"{{ quote.quote }}" - </div>
                                     <div>
-                                           {{ quote.author}}
-                                    </div>
-                                    <button class="btn btn-sm btn-info" (click)="toggleDetails(i)">
+                                       <span class="quote">
+                                        "{{ quote.quote }}" - 
+                                       </span> 
+                                       {{ quote.author}}
+                                    </div><br>
+                                    <button class="btn btn-sm btn-outline-info" (click)="toggleDetails(i)">
                                         Toggle Details
                                     </button>
                                 </div>
                                  <div class="col-md-6">
                                      <div class="float-right">
                                         Upvote:
-                                        <div class="btn btn-sm btn-round btn-success">+</div>
+                                        <div class="btn btn-sm btn-round btn-success" (click)="upvote(i)">+</div>
                                         &nbsp;
                                         Downvote:
-                                        <div class="btn btn-sm btn-round btn-danger">-</div>
+                                        <div class="btn btn-sm btn-round btn-danger" (click)="downvote(i)">-</div>
                                      </div>  
                                  </div>
                             </div>
