@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Quote } from '../quote';
 
 @Component({
@@ -34,5 +35,11 @@ export class QuoteComponent implements OnInit {
   //downvoting
   downvote(index:number){
       this.quotes[index].vote -= 1;
+  }
+
+  //add quote
+  addQuote(quote:Quote){
+      
+      this.quotes.push(quote);
   }
 }
