@@ -28,13 +28,13 @@ export class QuoteComponent implements OnInit {
 
   //upvoting
   upvote(index:number){
-      this.quotes[index].vote += 1;
-      console.log(this.quotes[index].vote)
+      this.quotes[index].upvote += 1;
+      console.log(this.quotes[index].upvote)
   }
 
   //downvoting
   downvote(index:number){
-      this.quotes[index].vote -= 1;
+      //this.quotes[index].vote -= 1;
   }
 
   //add quote
