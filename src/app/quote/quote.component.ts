@@ -44,7 +44,9 @@ export class QuoteComponent implements OnInit {
   }
 
   //delete quote
-  deleteQuote(i){
-    
+  deleteQuote(index:number){
+        if( confirm('Confirm quote delete?') ){
+              this.quotes.splice(index,1);
+        } 
   }
 }
