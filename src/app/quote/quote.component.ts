@@ -18,4 +18,9 @@ export class QuoteComponent implements OnInit {
         new Quote('Dont let yesterday take up too much of today.','Will Rogers','Thumi',new Date(2019,6,1))
   ]
 
+
+  //display/hide quote details
+  toggleDetails(index:number){
+       this.quotes[index].moreDetails = !this.quotes[index].moreDetails;
+  }
 }
