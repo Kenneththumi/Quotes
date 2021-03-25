@@ -1,20 +1,26 @@
 <div>
     <h3>New Quote</h3>
-    <form>
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
         <div class="form-group">
           <label for="quote">Quote</label>
-          <textarea class="form-control input-sm" id="quote" rows="3"></textarea>
+          <textarea ngModel required #txtArea="ngModel" name="quote" class="form-control input-sm" id="quote" rows="3"></textarea>
         </div>
       
         <div class="form-group">
           <label for="author">Author</label>
-          <input type="text" class="form-control input-sm" id="author" placeholder="e.g. Will Gallagher">
+          <input  ngModel required name="author" type="text" class="form-control input-sm" id="author" placeholder="e.g. Will Gallagher">
         </div>
       
          <div class="form-group">
           <label for="user">Submitted By</label>
-          <input type="text" class="form-control input-sm" id="user" placeholder="e.g. Will Gallagher">
+          <input  ngModel required name="user" type="text" class="form-control input-sm" id="user" placeholder="e.g. Will Gallagher">
         </div>
+
+        <div class="form-group">
+            <label for="user">Submitted On</label>
+            <input  ngModel required name="date" type="date" class="form-control input-sm" id="user">
+          </div>
+
         <button class="btn btn-success btn-sm" type="Submit">Submit</button>
       </form>
 </div>
