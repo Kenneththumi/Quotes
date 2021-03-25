@@ -1,1 +1,44 @@
-<p>quote works!</p>
+<div class="container">
+    <h3 class="text-center">Quotes</h3>
+    <div class="row">
+        <div class="col-md-8">
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let quote of quotes">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="quote">"{{ quote.quote }}" - </div>
+                                    <div>
+                                           {{ quote.author}}
+                                    </div>
+                                    <button class="btn btn-sm btn-info">
+                                        Toggle Details
+                                    </button>
+                                </div>
+                                 <div class="col-md-6">
+                                     <div class="float-right">
+                                        Upvote:
+                                        <div class="btn btn-sm btn-round btn-success">+</div>
+                                        &nbsp;
+                                        Downvote:
+                                        <div class="btn btn-sm btn-round btn-danger">-</div>
+                                     </div>  
+                                 </div>
+                            </div>
+                      
+                             <!-- Child component -->
+                             <div class="row">
+                                 <div class="col-md-12">
+                                    <app-quote-detail [quote]="quote" *ngIf="quote.moreDetails"></app-quote-detail>
+                                 </div>
+                                
+                             </div>       
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+</div>
