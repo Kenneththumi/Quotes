@@ -34,12 +34,17 @@ export class QuoteComponent implements OnInit {
 
   //downvoting
   downvote(index:number){
-      //this.quotes[index].vote -= 1;
+      this.quotes[index].downvote += 1;
   }
 
   //add quote
   addQuote(quote:Quote){
       
       this.quotes.push(quote);
+  }
+
+  //delete quote
+  deleteQuote(i){
+    
   }
 }
