@@ -24,7 +24,7 @@ export class QuoteFormComponent implements OnInit {
       this.quote.quote = f.form.value.quote;
       this.quote.author = f.form.value.author;
       this.quote.user = f.form.value.user;
-      this.quote.dateSubmission = new Date(f.form.value.dateSubmission);
+      this.quote.dateSubmission = new Date(f.form.value.date);
 
       this.newQuote.emit(this.quote);
 

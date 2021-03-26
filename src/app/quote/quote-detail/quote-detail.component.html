@@ -1,17 +1,25 @@
 <hr>
 <div >
     <div>
-       Author: {{ quote.author}}
+       Author: 
+         <b>{{ quote.author}}</b>
     </div>
     <div>
-        Submitted by: {{quote.user}}
+        Submitted by: 
+         <b>{{quote.user}}</b>
+    </div>
+    <div>
+        Approx. days Passed since creation: 
+        <b>{{quote.dateSubmission | dateCount }}</b>
     </div>
     <br>
     <div>
-        Upvotes: {{ quote.upvote }}
+        Upvotes: 
+        <b>{{ quote.upvote }}</b>
     </div>
     <div>
-        Downvotes: {{ quote.downvote }}
+        Downvotes: 
+        <b>{{ quote.downvote }}</b>
     </div>
     
 </div>
