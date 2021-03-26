@@ -1,27 +1,36 @@
-# Quotes
 
+# Quotes Management
+## Description
+This is a website that manages Quotes, whereby one can add,upvote/downvote and delete Quotes. It
+consists of the Quote itself, upvoting/downvoting mechanism,author,time passed since creation,
+,votes and the user who submitted the Quote.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
-## Development server
+To preview the website, use this link <a href="https://kenneththumi.github.io/Quotes/" target="_blank">here</a>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Author
+- [Kenneth Thumi](https://github.com/KennethThumi)
 
-## Code scaffolding
+## Setup instructions
+Below are steps to follow:
+1. Open cli, navigate to your project folder and clone the project: 
+    `git clone https://github.com/Kenneththumi/Quotes.git`
+2. Install Node Modules:
+    `npm install`
+3. Run:
+    `ng serve`
+4. In your browser open:
+    `http:://localhost:4200`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
+In this project, below is a list of technologies used:
+- HTML
+- CSS 
+- [Bootrap 4](https://getbootstrap.com/)
+- [Angular](https://angular.io)
 
-## Build
+## License info
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- **[MIT license](http://opensource.org/licenses/mit-license.php)**
+- Copyright 2021 © <a href="https://kenneththumi.github.io/Quotes/" target="_blank">Quotes Management</a>.
