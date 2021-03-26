@@ -29,7 +29,6 @@ export class QuoteComponent implements OnInit {
   //upvoting
   upvote(index:number){
       this.quotes[index].upvote += 1;
-      console.log(this.quotes[index].upvote)
   }
 
   //downvoting
@@ -48,5 +47,32 @@ export class QuoteComponent implements OnInit {
         if( confirm('Confirm quote delete?') ){
               this.quotes.splice(index,1);
         } 
+  }
+
+ 
+  //return a boolean whether the quote has the highest upvote
+  isHighestUpvote(index:number){
+         //create an array of upvotes from quotes array
+         let upvotes:number[]=[];
+         
+         for(let i=0; i<this.quotes.length; i++){
+                upvotes.push(this.quotes[i].upvote);
+         }
+
+         //get largest/max upvote from the upvotes array
+         let max = Math.max(...upvotes);
+         
+         //if no votes , i.e when zero upvotes, return false 
+         if(max==0){
+             return false;
+         }
+
+         //if the current item vote equal max vote return true
+         if(this.quotes[index].upvote == max){
+              return true
+         }
+
+         //any other sitation
+         return false;
   }
 }
